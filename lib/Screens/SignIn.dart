@@ -1,5 +1,6 @@
 import 'package:MiniProject/Screens/HomePage.dart';
 import 'package:MiniProject/Screens/ResetPassword.dart';
+import 'package:MiniProject/Screens/normal_Dialog.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'SignUp.dart';
@@ -147,6 +148,8 @@ class _LoginPageState extends State<LoginPage> {
                                     username.isEmpty ||
                                     password == null ||
                                     password.isEmpty) {
+                                  normalDialog(
+                                      context, 'กรุณากรอกข้อมูลต่อไปนี้');
                                 } else {
                                   logIn();
                                 }
@@ -222,7 +225,4 @@ class _LoginPageState extends State<LoginPage> {
       }
     });
   }
-
-  
-
 }

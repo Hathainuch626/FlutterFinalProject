@@ -1,4 +1,5 @@
 import 'package:MiniProject/Screens/SignIn.dart';
+import 'package:MiniProject/Screens/normal_Dialog.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -114,13 +115,11 @@ class _SignUpState extends State<SignUp> {
                                     username == null ||
                                     username.isEmpty ||
                                     password == null ||
-                                    password.isEmpty ||
-                                    conpass == null ||
-                                    conpass.isEmpty) {
-                                } else if (password != conpass ||
-                                    conpass != password &&
-                                        password.length >= 6) {
-                                } else {
+                                    password.isEmpty  ) {
+                                  normalDialog(context,
+                                      'กรุณากรอกข้อมูลต่อไปนี้');
+                                } 
+                                else {
                                   var data = database.child("user");
                                   data
                                       .child(username)
@@ -128,7 +127,10 @@ class _SignUpState extends State<SignUp> {
                                       .then((DataSnapshot snapshot) {
                                     if ('${snapshot.value}' == 'null') {
                                       signIn();
-                                    } else {}
+                                    } else {
+                                      normalDialog(
+                                          context, 'ไม่สามารถใช้ชื่อผู้ใช้นี้');
+                                    }
                                   });
                                 }
                               },
@@ -198,24 +200,4 @@ class _SignUpState extends State<SignUp> {
     Navigator.pushAndRemoveUntil(context, route, (route) => false);
   }
 
-//   signUp() {
-//     String email = emailController.text.trim();
-//     String password = passwordController.text.trim();
-//     String confirmPassword = confirmController.text.trim();
-//     if (password == confirmPassword && password.length >= 6) {
-//       _auth
-//           .createUserWithEmailAndPassword(email: email, password: password)
-//           .then((user) {
-//         print("Sign up user successful.");
-//         Navigator.pushAndRemoveUntil(
-//             context,
-//             MaterialPageRoute(builder: (context) => HomePage()),
-//             ModalRoute.withName('/'));
-//       }).catchError((error) {
-//         print(error.message);
-//       });
-//     } else {
-//       print("Password and Confirm-password is not match.");
-//     }
-//   }
 }
