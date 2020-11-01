@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "99560427021",
+    "firebase_url": "https://miniprojectflutter.firebaseio.com",
+    "project_id": "miniprojectflutter",
+    "storage_bucket": "miniprojectflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99560427021:android:dd75372777ad20e419cf44",
+        "android_client_info": {
+          "package_name": "BlueApp.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99560427021-snl7634sr9cjr68if7qsrk1ba8oi4puc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjCgl92rGpGPGNDdujjHVyuMIA4R5Wm5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99560427021-snl7634sr9cjr68if7qsrk1ba8oi4puc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
