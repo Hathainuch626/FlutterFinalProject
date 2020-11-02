@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 50,
                         ),
                         Center(
-                            child: Image(
+                          child: Image(
                           image: AssetImage('assets/food.png'),
                           height: 130,
                           width: 130,

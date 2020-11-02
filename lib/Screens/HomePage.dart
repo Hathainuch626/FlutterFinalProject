@@ -1,23 +1,15 @@
 import 'package:MiniProject/Screens/SignIn.dart';
 import 'package:MiniProject/Views/home.dart';
 import 'package:flutter/material.dart';
-
 //import 'package:cloud_firestore/cloud_firestore.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 
-
 class HomePage extends StatefulWidget {
-  //final FirebaseUser user;
-
-  //HomePage({Key key, this.user}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  //final FirebaseAuth _auth = FirebaseAuth.instance;
-
   @override
   initState() {
     super.initState();
@@ -35,20 +27,34 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
               onPressed: () {
                 LoginPage();
-                  signOut(context);
+                signOut(context);
               })
         ],
       ),
       backgroundColor: Color((0xFF7d5d5d)),
+      
       body: Container(
         child: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Text("Hello Hathainuch",
+              Text(" Account User",
                   style: TextStyle(fontSize: 30, color: Colors.white)),
-              //Text(widget.user.email,
-                //style: TextStyle(fontSize: 20, color: Colors.white)),
+              SizedBox(
+                height: 20,
+              ),
+              Image(
+                image: AssetImage('assets/049coffee.png'),
+                height: 130,
+                width: 130,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text("ชื่อ: user123",
+                  style: TextStyle(fontSize: 20, color: Colors.white)),
+              Text("ชื่อผู้ใช้: Jessica",
+                  style: TextStyle(fontSize: 20, color: Colors.white)),
             ],
           ),
         ),
@@ -103,7 +109,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-    void signOut(BuildContext context) {
+  void signOut(BuildContext context) {
     //_auth.signOut();
     Navigator.pushAndRemoveUntil(
         context,

@@ -84,13 +84,6 @@ class _DetailPageOrtherState extends State<DetailPageOrther> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text(
-                      "คำอธิบาย",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w900),
-                    ),
                     SizedBox(
                       height: 8,
                     ),
